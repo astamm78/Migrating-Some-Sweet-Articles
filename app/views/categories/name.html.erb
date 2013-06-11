@@ -1,0 +1,6 @@
+<h1><%=@category.title.capitalize%></h1>
+<ul>
+  <% @category.articles.each do |art| %>
+  <li><%= link_to art.title, single_url_path(art.category.title, art.title.gsub(/\s/, '-'))%></li>
+  <% end %>
+</ul>

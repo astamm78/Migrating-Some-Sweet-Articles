@@ -1,0 +1,6 @@
+<h1><%=@tag.tag %></h1>
+<ul>
+  <% @tag.articles.each do |art| %>
+  <li><%= link_to art.title, single_url_path(art.category.title, art.title.gsub(/\s/, '-'))%></li>
+  <%end%>
+</ul>
